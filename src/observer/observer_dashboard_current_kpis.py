@@ -19,3 +19,6 @@ class DashboardCurrentKPIs(AbsObserver):
         print(f"Current open tickets : {self.open_tickets}")
         print(f"New tickets : {self.closed_tickets}")
         print(f"Tickets closed : {self.new_tickets}")
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        self._kpis.detach(self)
