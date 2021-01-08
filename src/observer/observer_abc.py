@@ -3,7 +3,7 @@ import abc
 class AbsObserver(metaclass=abc.ABCMeta):
 
     @abc.abstractmethod
-    def update(self, value):
+    def update(self, value=None):
         pass
 
     def __enter__(self):
